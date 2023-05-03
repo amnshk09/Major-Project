@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+  rel="stylesheet"
+/>
+  </head>
+  <div id="a" align="center">
+    <header>Weather Forecast    <i id="icon" class="bi bi-cloud-lightning-rain"></i></header></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Weather App</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/index.html#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://weather.com/forecast">More About Weather Forecast</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://www.msn.com/en-us/weather/forecast/in-Mexico-City,Mexico?loc=eyJsIjoiTWV4aWNvIENpdHkiLC
+                  JyIjoiTWV4aWNvIENpdHkiLCJyMiI6IkN1YXVodMOpbW9jIiwiYyI6Ik1leGljbyIsImkiOiJNWCIsImciOiJlbi11cyIsIngiOiItOTkuMTQiLCJ5IjoiMTkuNDMifQ%
+                  3D%3D&ocid=ansmsnweather&weadegreetype=F">Mexico</a></li>
+                <li><a class="dropdown-item" href="https://www.msn.com/en-us/weather/forecast/in-Warsaw,Mazowieckie?loc=eyJsIjoiV2Fyc2F3IiwiciI6
+                  Ik1hem93aWVja2llIiwicjIiOiJXYXJzYXciLCJjIjoiUG9sYW5kIiwiaSI6IlBMIiwiZyI6ImVuLXVzIiwieCI6IjIxLjAwOSIsInkiOiI1Mi4yMzUifQ%3D%3D&oc
+                  id=ansmsnweather&weadegreetype=F">Warsaw</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="https://www.msn.com/en-us/weather/forecast/in-Madison,WI?loc=eyJsIjoiTWFkaXNvbiIsInIiOiJXSSI
+                  sInIyIjoiRGFuZSBDby4iLCJjIjoiVW5pdGVkIFN0YXRlcyIsImkiOiJVUyIsImciOiJlbi11cyIs
+                  IngiOiItODkuMzg1IiwieSI6IjQzLjA3NCJ9&ocid=ansmsnweather&weadegreetype=F">Madison</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.octalsoftware.com/blog/weather-forecast-alert-app-development/">Usage Guide</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input id="city"class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  <body>
+    
+<div class="container">
+  <h1 class="my-4 text-center">Weather for <span id="cityName"></span>
+    <img src="https://openweathermap.org/img/wn/11d@2x.png" alt="weather icon" class="w-icon"></h1>
+  <main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primar">
+            <h4 class="my-0 fw-normal">Temperatures</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><span id="temp2"></span><small class="text-body-secondary fw-light">
+              <span>&#8451;</span></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Temperature is <span id="temp"></span></li>
+              <li>Max Temp is <span id="max_temp"></span></li>
+              <li>Min Temp is <span id="min_temp"></span></li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">
+              <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon"></button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primar">
+            <h4 class="my-0 fw-normal">Humidity Info</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><span id="humidity2"></span><small class="text-body-secondary fw-light"> %</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Wind Degree is <span id="wind_degrees"></span></li>
+              <li>Feels Like is <span id="feels_like"></span></li>
+              <li>Humidity is <span id="humidity"></span></li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">
+              <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon"></button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Wind Info</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span><small class="text-body-secondary fw-light"> Km/hr</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Wind speed <span id="wind_speed"></span></li>
+              <li>Sunrise is <span id="sunrise"></span></li>
+              <li>Sunset is <span id="sunset"></span></li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">
+              <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon"></button></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 id ="card"class="display-6 text-center mb-4">Other Common Cities weather forecast</h2>
+
+    <div class="table-responsive">
+      <table id ="fss-color" class="table text-center">
+        <thead>
+          <tr>
+      <th style="width: 22%;"></th>
+            <th style="width: 22%;">Feels_like</th>
+<th style="width: 22%;">Humidity</th>
+<th style="width: 22%;">Max_temp</th>
+<th style="width: 22%;">Min_temp</th>
+<th style="width: 22%;">Sunrise</th>
+<th style="width: 22%;">Sunset</th>
+<th style="width: 22%;">Temp</th>
+<th style="width: 22%;">Wind_degrees</th>
+<th style="width: 22%;">Wind_speed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" id= "ayo" class="text-start">Ayodhya</th>
+            <td><span id="feels_like1"></span></td>
+            <td><span id="humidity1"></span></td>
+            <td><span id="max_temp1"></span></td>
+            <td><span id="min_temp1"></span></td>
+            <td><span id="sunrise1"></span></td>
+            <td><span id="sunset1"></span></td>
+            <td><span id="temp1"></span></td>
+            <td><span id="wind_degrees1"></span></td>
+            <td><span id="wind_speed1"></span></td>
+          </tr>
+          <tr>
+            <th scope="row" id= "mum" class="text-start">Mumbai</th>
+            <td><span id="feels_like3"></span></td>
+            <td><span id="humidity3"></span></td>
+            <td><span id="max_temp3"></span></td>
+            <td><span id="min_temp3"></span></td>
+            <td><span id="sunrise3"></span></td>
+            <td><span id="sunset3"></span></td>
+            <td><span id="temp3"></span></td>
+            <td><span id="wind_degrees3"></span></td>
+            <td><span id="wind_speed3"></span></td>
+            </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" id="raj"class="text-start">Agra</th>
+            <td><span id="feels_like4"></span></td>
+            <td><span id="humidity4"></span></td>
+            <td><span id="max_temp4"></span></td>
+            <td><span id="min_temp4"></span></td>
+            <td><span id="sunrise4"></span></td>
+            <td><span id="sunset4"></span></td>
+            <td><span id="temp4"></span></td>
+            <td><span id="wind_degrees4"></span></td>
+            <td><span id="wind_speed4"></span></td>
+           </tr>
+          <tr>
+            <th scope="row" id="bsbs" class="text-start">Varanasi</th>
+            <td><span id="feels_like5"></span></td>
+            <td><span id="humidity5"></span></td>
+            <td><span id="max_temp5"></span></td>
+            <td><span id="min_temp5"></span></td>
+            <td><span id="sunrise5"></span></td>
+            <td><span id="sunset5"></span></td>
+            <td><span id="temp5"></span></td>
+            <td><span id="wind_degrees5"></span></td>
+            <td><span id="wind_speed5"></span></td>
+             </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
+></script>
+<footer class="bg-light text-center text-white">
+  <br>
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #3b5998;"
+        href="https://www.facebook.com/"
+        role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <!-- Linkedin -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #0082ca;"
+        href="https://www.linkedin.com/feed/"
+        role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+      <!-- Github -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #333333;"
+        href="https://github.com/"
+        role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+<br>
+<br>
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.995);">
+    © 2023 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">Developed By:- Aman Sonkar</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
